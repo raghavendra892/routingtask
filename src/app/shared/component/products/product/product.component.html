@@ -1,0 +1,10 @@
+<mat-card >
+    <mat-card-content>
+       <h2>{{productobject.pname}}</h2>
+        <p>
+            The product is {{productobject.pname}}  and its status is {{productobject.pstatus}}
+        </p>
+        <!-- <button class="btn btn-primary" [routerLink]="['/products', productobject.pid, 'edit']">Edit product</button> -->
+        <button mat-raised-button color="primary" [routerLink]="['/products', productobject.pid, 'edit']">Edit product</button>
+    </mat-card-content>
+</mat-card>
