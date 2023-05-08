@@ -8,18 +8,23 @@ import { SnackbarService } from './snackbar.service';
 export class ProductsService {
 productArray : Array<Iproducts> =[
   {
-    pname : "samsung 31",
+    pname : "Samsung 31",
     pid : 1,
     pstatus : "In-progress"
   },
   {
-    pname : "samsung s 23 Ultra",
+    pname : "Samsung s 23 Ultra",
     pid : 2,
     pstatus : "Dispatched"
   },
   {
     pname : "Iphone",
     pid : 3,
+    pstatus : "Delivered"
+  },
+  {
+    pname : "Vivo v25 Pro",
+    pid : 4,
     pstatus : "Delivered"
   }
 ];

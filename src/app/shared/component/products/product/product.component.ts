@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Iproducts } from 'src/app/shared/model/product';
 import { ProductsService } from 'src/app/shared/services/products.service';
 
@@ -11,7 +11,7 @@ import { ProductsService } from 'src/app/shared/services/products.service';
 export class ProductComponent implements OnInit {
   ProductId !: number;
   productobject !: Iproducts;
-  constructor(private _route: ActivatedRoute, private _productservice: ProductsService) { } // it give data from current route it gives ActivatedRoute
+  constructor(private _route: ActivatedRoute, private _productservice: ProductsService, private _router : Router) { } // it give data from current route it gives ActivatedRoute
 
   ngOnInit(): void {
     //console.log(this._route.snapshot)
@@ -30,6 +30,9 @@ export class ProductComponent implements OnInit {
     //     this.productobject = this._productservice.getSingleProduct(this.ProductId)!;
     //   })
 
+  }
+  Onclick(){
+    this._router.navigate(['/'])
   }
 
 }

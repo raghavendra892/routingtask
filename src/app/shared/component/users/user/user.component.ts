@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Iusers } from 'src/app/shared/model/users';
 import { UsersService } from 'src/app/shared/services/users.service';
 
@@ -11,7 +11,7 @@ import { UsersService } from 'src/app/shared/services/users.service';
 export class UserComponent implements OnInit {
   UserId ! : number;
   userobj ! : Iusers;
-  constructor(private _route : ActivatedRoute, private _userService : UsersService) { }
+  constructor(private _route : ActivatedRoute, private _userService : UsersService, private _router : Router) { }
 
   ngOnInit(): void {
     //console.log(this._route.snapshot)
@@ -25,6 +25,10 @@ export class UserComponent implements OnInit {
           this.UserId = +myparams['userid'];
           this.userobj = this._userService.getSingleUser(this.UserId);
         });
+  }
+
+  onclick(){
+    this._router.navigate(['/'])
   }
 
 }

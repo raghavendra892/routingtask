@@ -7,8 +7,8 @@
         <h3>User Id of this user is <strong>{{userobj.id}}</strong></h3>
         <!-- <button class="btn btn-primary" [routerLink]="['/users' , userobj.id, 'edit']">Edit User</button> -->
         <button mat-raised-button color="primary" [routerLink]="['/users' , userobj.id, 'edit']">Edit User</button>
-        
     </mat-card-content>
+    <mat-icon aria-hidden="false"  aria-label="Example home icon" class="icon" fontIcon="home" (click)="onclick()"></mat-icon>
 </mat-card>
 
 <a href="javascript:;" [routerLink]="['/users', 3]">
