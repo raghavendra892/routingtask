@@ -14,6 +14,7 @@ import { EditProductComponent } from './shared/component/products/edit-product/e
 import { EdituserComponent } from './shared/component/users/edituser/edituser.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
+import { NavdropdownDirective } from './shared/directive/navdropdown.directive';
 
 
 
@@ -28,7 +29,8 @@ import { MaterialModule } from './material/material.module';
     ProductComponent,
     PageNotFoundComponent,
     EditProductComponent,
-    EdituserComponent
+    EdituserComponent,
+    NavdropdownDirective
   ],
   imports: [
     BrowserModule,

@@ -9,16 +9,20 @@ export class UsersService {
 
   usersArray : Array<Iusers> = [
     {
-      username : "jhon",
+      username : "Jhon",
       id : 1
     },
     {
-      username : "jen",
+      username : "Jen",
       id : 2
     },
     {
-      username : "july",
+      username : "July",
       id : 3
+    },
+    {
+      username : "Thomas",
+      id : 4
     }
   ];
   constructor(private _snackbarService : SnackbarService) { }
